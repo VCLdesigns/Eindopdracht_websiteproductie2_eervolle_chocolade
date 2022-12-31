@@ -2,48 +2,38 @@
 /* Copyright 2023, Bart Victor Loots
 /*
 /* Fonts */
-
 @font-face {
-    font-family: 'caveat';
-    src: url('../fonts/caveat-regular-webfont.eot');
-    src: url('../fonts/caveat-regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/caveat-regular-webfont.woff2') format('woff2'),
-        url('../fonts/caveat-regular-webfont.woff') format('woff'),
-        url('../fonts/caveat-regular-webfont.ttf') format('truetype'),
-        url('../fonts/caveat-regular-webfont.svg#caveatregular') format('svg');
+    font-family: 'bagnard_sans_regularregular';
+    src: url('../fonts/bagnardsans-webfont.eot');
+    src: url('../fonts/bagnardsans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bagnardsans-webfont.woff2') format('woff2'),
+         url('../fonts/bagnardsans-webfont.woff') format('woff'),
+         url('../fonts/bagnardsans-webfont.ttf') format('truetype'),
+         url('../fonts/bagnardsans-webfont.svg#bagnard_sans_regularregular') format('svg');
     font-weight: normal;
     font-style: normal;
+
 }
+
+
+
 
 @font-face {
-    font-family: 'josefin_sans';
-    src: url('../fonts/josefinsans-regular-webfont.eot');
-    src: url('../fonts/josefinsans-regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/josefinsans-regular-webfont.woff2') format('woff2'),
-        url('../fonts/josefinsans-regular-webfont.woff') format('woff'),
-        url('../fonts/josefinsans-regular-webfont.ttf') format('truetype'),
-        url('../fonts/josefinsans-regular-webfont.svg#josefin_sansregular') format('svg');
+    font-family: 'maximilianregular';
+    src: url('../fonts/maximilian-webfont.eot');
+    src: url('../fonts/maximilian-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/maximilian-webfont.woff2') format('woff2'),
+         url('../fonts/maximilian-webfont.woff') format('woff'),
+         url('../fonts/maximilian-webfont.ttf') format('truetype'),
+         url('../fonts/maximilian-webfont.svg#maximilianregular') format('svg');
     font-weight: normal;
     font-style: normal;
-}
 
-@font-face {
-    font-family: 'montserrat';
-    src: url('../fonts/montserrat-regular-webfont.eot');
-    src: url('../fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/montserrat-regular-webfont.woff2') format('woff2'),
-        url('../fonts/montserrat-regular-webfont.woff') format('woff'),
-        url('../fonts/montserrat-regular-webfont.ttf') format('truetype'),
-        url('../fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
 }
-
 /* Variabelen*/
 :root {
-    --font_titel: 'caveat', georgia, serif;
-    --font_subtitel: 'josefin_sans', arial, sans-serif;
-    --font_teksten: 'montserrat', verdana, sans-serif;
+    --font_titel: 'maximilianregular', georgia, serif;
+    --font_teksten: 'bagnard_sans_regularregular' verdana, sans-serif;
     --kleur_wit: #f2f2f2;
     --kleur_zwart: #0d0d0d;
     --kleur_rood: #8c0d03;
@@ -71,6 +61,9 @@ body {
     font-size: 2rem;
     color: var(--kleur_zwart);
     line-height: 1.5;
+}
+h1, h2,h3,h4,h5,h6{
+	font-family: var(--font_titel);
 }
 
 img {

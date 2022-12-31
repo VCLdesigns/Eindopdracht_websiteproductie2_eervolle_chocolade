@@ -44,9 +44,9 @@
     --font_titel: 'caveat', georgia, serif;
     --font_subtitel: 'josefin_sans', arial, sans-serif;
     --font_teksten: 'montserrat', verdana, sans-serif;
-    --kleur_wit: rgb(248, 247, 243);
-    --kleur_zwart: rgb(48, 48, 48);
-    --kleur_rood: rgb(188, 0, 45);
+    --kleur_wit: #f2f2f2;
+    --kleur_zwart: #0d0d0d;
+    --kleur_rood: #8c0d03;
 }
 
 /* Standaard */
@@ -77,10 +77,6 @@ img {
     display: block;
 }
 
-header{
-	background-color:#C9C;
-}
-
-footer{
-	background-color:#399;
+header, footer{
+	background-color:var(--kleur_rood);
 }

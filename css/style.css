@@ -1,42 +1,113 @@
-
 /* Copyright 2023, Bart Victor Loots
 /*
 /* Fonts */
+
 @font-face {
-    font-family: 'bagnard_sans_regularregular';
-    src: url('../fonts/bagnardsans-webfont.eot');
-    src: url('../fonts/bagnardsans-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/bagnardsans-webfont.woff2') format('woff2'),
-         url('../fonts/bagnardsans-webfont.woff') format('woff'),
-         url('../fonts/bagnardsans-webfont.ttf') format('truetype'),
-         url('../fonts/bagnardsans-webfont.svg#bagnard_sans_regularregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "wizards_magicregular";
+  src: url("../fonts/wizards_magic-webfont.eot");
+  src: url("../fonts/wizards_magic-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/wizards_magic-webfont.woff2") format("woff2"),
+    url("../fonts/wizards_magic-webfont.woff") format("woff"),
+    url("../fonts/wizards_magic-webfont.ttf") format("truetype"),
+    url("../fonts/wizards_magic-webfont.svg#wizards_magicregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "kingthings_exeterregular";
+  src: url("../fonts/kingthings_exeter-webfont.eot");
+  src: url("../fonts/kingthings_exeter-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/kingthings_exeter-webfont.woff2") format("woff2"),
+    url("../fonts/kingthings_exeter-webfont.woff") format("woff"),
+    url("../fonts/kingthings_exeter-webfont.ttf") format("truetype"),
+    url("../fonts/kingthings_exeter-webfont.svg#kingthings_exeterregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello.eot?50794552');
+  src: url('../fonts/fontello.eot?50794552#iefix') format('embedded-opentype'),
+    url('../fonts/fontello.woff2?50794552') format('woff2'),
+    url('../fonts/fontello.woff?50794552') format('woff'),
+    url('../fonts/fontello.ttf?50794552') format('truetype'),
+    url('../fonts/fontello.svg?50794552#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "fontello";
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
 }
 
-
-
-
-@font-face {
-    font-family: 'maximilianregular';
-    src: url('../fonts/maximilian-webfont.eot');
-    src: url('../fonts/maximilian-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/maximilian-webfont.woff2') format('woff2'),
-         url('../fonts/maximilian-webfont.woff') format('woff'),
-         url('../fonts/maximilian-webfont.ttf') format('truetype'),
-         url('../fonts/maximilian-webfont.svg#maximilianregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+.icon-phone:before {
+  content: '\e800';
 }
+
+
+.icon-adult:before {
+  content: '\e801';
+}
+
+
+.icon-feather:before {
+  content: '\e802';
+}
+
+
+.icon-star:before {
+  content: '\e803';
+}
+
+
+.icon-home:before {
+  content: '\e804';
+}
+
+
+.icon-king:before {
+  content: '\e805';
+}
+
+
+.icon-theatre:before {
+  content: '\e83a';
+}
+
+
+.icon-town-hall:before {
+  content: '\e83c';
+}
+
+.icon-mail-alt:before {
+  content: '\f0e0';
+}
+
+
 /* Variabelen*/
 :root {
-    --font_titel: 'maximilianregular', georgia, serif;
-    --font_teksten: 'bagnard_sans_regularregular' verdana, sans-serif;
-    --kleur_wit: #f2f2f2;
-    --kleur_zwart: #0d0d0d;
-    --kleur_rood: #8c0d03;
+  --font_titel: "wizards_magicregular", georgia, serif;
+  --font_teksten: "kingthings_exeterregular", verdana, sans-serif;
+  --kleur_wit: #fcf5e5;
+  --kleur_zwart: #06080f;
+  --kleur_blauw: #0422bf;
 }
 
 /* Standaard */
@@ -44,32 +115,1177 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--kleur_wit);
-    min-height: 100%;
-    font-family: var(--font_teksten);
-    font-size: 2rem;
-    color: var(--kleur_zwart);
-    line-height: 1.5;
+  background-color: var(--kleur_wit);
+  min-height: 100%;
+  font-family: var(--font_teksten);
+  font-size: 2rem;
+  color: var(--kleur_zwart);
+  line-height: 1.5;
 }
-h1, h2,h3,h4,h5,h6{
-	font-family: var(--font_titel);
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 0 10rem 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font_titel);
+}
+
+h1 {
+  font-size: 10rem;
+  text-align: center;
+  font-weight: 800;
+  text-shadow: 0 2px 1px #747474, -1px 3px 1px #767676, -2px 5px 1px #787878,
+    -3px 7px 1px #7a7a7a, -4px 9px 1px #7f7f7f, -5px 11px 1px #838383,
+    -6px 13px 1px #878787, -7px 15px 1px #8a8a8a, -8px 17px 1px #8e8e8e,
+    -9px 19px 1px #949494, -10px 21px 1px #989898, -11px 23px 1px #9f9f9f,
+    -12px 25px 1px #a2a2a2, -13px 27px 1px #a7a7a7, -14px 29px 1px #adadad,
+    -15px 31px 1px #b3b3b3, -16px 33px 1px #b6b6b6, -17px 35px 1px #bcbcbc,
+    -18px 37px 1px #c2c2c2, -19px 39px 1px #c8c8c8, -20px 41px 1px #cbcbcb,
+    -21px 43px 1px #d2d2d2, -22px 45px 1px #d5d5d5, -23px 47px 1px #e2e2e2,
+    -24px 49px 1px #e6e6e6, -25px 51px 1px #eaeaea, -26px 53px 1px #efefef;
+  padding-bottom: 5rem;
+}
+
+h2 {
+  font-size: 6rem;
+  text-align: center;
+  font-weight: 600;
+  background-image: url(../img/title/background.png);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+}
+
+h2:first-of-type {
+  background-position: top left;
+}
+
+h2:nth-of-type(2) {
+  background-position: center center;
+}
+
+h2:last-of-type {
+  background-position: bottom right;
+}
+
+h3 {
+  font-size: 5rem;
+}
+
+h4 {
+  font-size: 4rem;
+}
+
+h5 {
+  font-size: 3rem;
+}
+
+h6 {
+  font-size: 2.5rem;
 }
 
 img {
-    display: block;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-header, footer{
-	background-color:var(--kleur_rood);
+ul {
+  list-style: none;
+}
+
+
+/*
+    Menu
+
+*/
+
+header {
+
+  border-bottom: var(--kleur_blauw) ridge 1rem;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+#header_content,
+#footer_content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#header_content {
+  display: flex;
+  justify-content: space-between;
+}
+
+header img {
+  width: 100%;
+  max-width: 600px;
+}
+
+#nav {
+  position: relative;
+}
+
+#nav::after {
+  content: "";
+  position: absolute;
+  top: 32px;
+  left: -154px;
+  display: block;
+  width: 200px;
+  height: 400px;
+  background-image: url(../img/wizard2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top left;
+}
+
+#nav_links a {
+  display: block;
+  width: 450px;
+  height: auto;
+  border: var(--kleur_blauw) inset 0.5rem;
+  outline: var(--kleur_blauw) outset 0.5rem;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  margin: 2rem;
+  color: var(--kleur_blauw);
+  text-shadow: -1px -1px 0px rgb(38, 57, 77);
+  text-decoration: none;
+  font-size: 4rem;
+  line-height: 4rem;
+  letter-spacing: 0.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem;
+  transition: background 0.1s linear;
+}
+
+#nav_links a:nth-of-type(1) {
+  background: url(../img/arcane_circle.png), url(../img/arcane_circle.png);
+  background-position: 5%, 95%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+}
+
+#nav_links a:nth-of-type(2) {
+  background: url(../img/arcane_circle2.png), url(../img/arcane_circle2.png);
+  background-position: 5%, 95%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+}
+
+#nav_links a:nth-of-type(3) {
+  background: url(../img/arcane_circle3.png), url(../img/arcane_circle3.png);
+  background-position: 5%, 95%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+}
+
+#nav_links a:nth-of-type(4) {
+  background: url(../img/arcane_circle4.png), url(../img/arcane_circle4.png);
+  background-position: 5%, 95%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+}
+
+#nav_links a:hover {
+  font-size: 4.5rem;
+  color: #4f64d2;
+  background: url(../img/arcane_effect2.png), url(../img/arcane_effect2_inversed.png);
+  background-position: 5%, 95%;
+  background-size: contain, contain;
+  background-repeat: no-repeat;
+}
+
+/*
+    Call to action
+    Les 6 - Backgrounds + les 9 - Background blend mode
+*/
+
+/*
+    Index Pagina
+*/
+
+
+#title_container {
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/chocolat_pattern.jpg);
+  overflow: hidden;
+
+}
+
+#title_container h1 {
+  font-size: 15rem;
+  text-shadow: none;
+  color: var(--kleur_wit);
+
+}
+
+#title_container span {
+  position: relative;
+  display: inline-block;
+  width: 125px;
+  height: 225px;
+  text-align: center;
+  z-index: 1;
+
+}
+
+#title_container span:hover {
+  cursor: pointer;
+
+}
+
+#title_container span:hover::before {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: -37.5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+#letter_A:hover::before {
+  background-image: url(../img/title/letter_A.png);
+}
+
+#letter_N1:hover::before,
+#letter_N2:hover::before {
+  background-image: url(../img/title/letter_N.png);
+}
+
+#letter_T:hover::before {
+  background-image: url(../img/title/letter_T.png);
+}
+
+#letter_O:hover::before {
+  background-image: url(../img/title/letter_O.png);
+}
+
+#letter_I:hover::before {
+  background-image: url(../img/title/letter_I.png);
+}
+
+#letter_E:hover::before {
+  background-image: url(../img/title/letter_E.png);
+}
+
+#title_container span:hover::after {
+  content: "";
+  display: block;
+  width: 440px;
+  height: 416px;
+  position: absolute;
+  top: -106px;
+  left: -154.5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/arcane_circle2.png);
+  z-index: -2;
+  animation: circleSpin 10s linear forwards;
+  transition: transform 0.1s linear;
+}
+
+@keyframes circleSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
+
+.letter {
+  transform: rotateY(0deg);
+  transition: transform 0.3s linear;
+}
+
+@keyframes letterRoll {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  0% {
+    transform: rotateY(-180deg);
+  }
+
+}
+
+#index_pagina {
+  position: relative;
+  min-height: 100vh;
+}
+
+#intro_quote blockquote {
+  display: block;
+  width: 600px;
+  height: auto;
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  font-size: 10rem;
+}
+
+blockquote:before {
+  content: "";
+  position: absolute;
+  left: -238px;
+  top: -44px;
+  display: block;
+  width: 315px;
+  height: 400px;
+  background-image: url(../img/magic_wand.png);
+}
+
+
+#intro_nav {
+  display: block;
+  width: 500px;
+  height: auto;
+  position: absolute;
+  top: 5rem;
+  right: 0;
+}
+
+strong {
+  color: var(--kleur_blauw);
+  font-size: 10.2rem;
+}
+
+/*
+    About Pagina
+
+*/
+.brood_font {
+  font-family: var(--font_teksten);
+}
+
+#about_summoning {
+  width: 100%;
+  max-width: none;
+  overflow: hidden;
+}
+
+.about_background_corner {
+  position: absolute;
+  display: block;
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.4s linear;
+}
+
+#corner_top_left {
+  background-image: url(../img/summoning_circle1.png);
+  top: -150px;
+  left: -150px;
+  animation: summoningSpin 30s linear infinite;
+}
+
+#corner_top_right {
+  background-image: url(../img/summoning_circle2.png);
+  top: -150px;
+  right: -150px;
+  animation: summoningSpinReverse 30s linear infinite;
+}
+
+#corner_bottom_left {
+  background-image: url(../img/summoning_circle2.png);
+  bottom: -150px;
+  left: -150px;
+  animation: summoningSpin 30s linear infinite;
+}
+
+#corner_bottom_right {
+  background-image: url(../img/summoning_circle1.png);
+  bottom: -150px;
+  right: -150px;
+  animation: summoningSpinReverse 30s linear infinite;
+}
+
+@keyframes summoningSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
+
+@keyframes summoningSpinReverse {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+
+}
+
+#about_page,
+#about_summoning {
+  position: relative;
+}
+
+#about_page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#about_page p::first-letter {
+  float: left;
+  font-size: 7rem;
+  line-height: 6rem;
+  padding: 0.4rem 0.8rem 0 0.3rem;
+  color: var(--kleur_blauw);
+}
+
+#about_page h2 {
+  padding: 3rem 0;
+}
+
+#about_page section {
+  margin-bottom: 10rem;
+}
+
+#about_page h3 {
+  padding: 2rem 0;
+  background-color: var(--kleur_blauw);
+  background-image: linear-gradient(135deg, #7db9e8 0%, #207cca 50%, #2989d8 51%, #0422bf 100%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+#about_page h4 {
+  padding: 1.5rem 0;
+  background-color: var(--kleur_blauw);
+  background-image: linear-gradient(135deg, #0422bf 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+#about_page p {
+  padding: 1rem 0;
+}
+
+#about_page img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  place-self: center;
+}
+
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.columns {
+  columns: 3;
+  margin-bottom: 5rem;
+}
+
+.columns .column_item {
+  break-inside: avoid;
+}
+
+.column_item h4 {
+  text-align: center;
+}
+
+#section_quality h4,
+.section_history h4,
+#section_primes h4 {
+  position: relative;
+}
+
+.section_history h4 {
+  text-align: right;
+}
+
+#section_quality h4::before,
+.section_history h4::before,
+#section_primes h4::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 50px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.section_history h4::before,
+#section_quality h4::before {
+  left: 0;
+}
+
+
+#section_primes h4::after {
+  right: 0;
+}
+
+#section_quality h4::before {
+  background-image: url(../img/potion1.png);
+}
+
+.section_history h4::before {
+  background-image: url(../img/potion2.png);
+}
+
+#section_primes h4::after {
+  background-image: url(../img/potion3.png);
+}
+
+#grid section:nth-of-type(1) {
+  grid-area: 1/1/2/7;
+}
+
+#about_wizard {
+  grid-area: 1/7/2/13;
+
+}
+
+#about_wizard,
+#hip_boots {
+  transform: scaleX(-1);
+}
+
+#grid section:nth-of-type(2) {
+  grid-area: 2/7/3/13;
+}
+
+#alchemy_tafel {
+  grid-area: 2/1/3/7;
+}
+
+#alchemy_tafel,
+#hoard_gold {
+  border-radius: 1rem;
+}
+
+#grid section:nth-of-type(3) {
+  grid-area: 3/1/4/7;
+}
+
+#hip_boots {
+  grid-area: 3/7/4/13;
+}
+
+#grid section:nth-of-type(4) {
+  grid-area: 4/7/5/13;
+}
+
+#hoard_gold {
+  grid-area: 4/1/5/7;
+}
+
+/*
+    Producten Pagina 
+*/
+
+#chocolade_kunst_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 5rem;
+}
+
+.background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--kleur_blauw);
+}
+
+.chocolade_kunst_box {
+  position: relative;
+  display: block;
+  width: 300px;
+  height: 200px;
+  margin: 1rem;
+}
+
+#arnoud {
+  background-image: url(../img/chocolade_fotos/chocolade_kunst.jpg);
+}
+
+#ariel {
+  background-image: url(../img/chocolade_fotos/chocolade_kunst2.jpg);
+}
+
+#aurore {
+  background-image: url(../img/chocolade_fotos/chocolade_kunst3.jpg);
+}
+
+#arno {
+  background-image: url(../img/chocolade_fotos/chocolade_kunst4.jpg);
+}
+
+#arnica {
+  background-image: url(../img/chocolade_fotos/chocolade_kunst5.jpg);
+}
+
+#azis {
+  background-image: url(../img/chocolade_fotos/chocolade_kunst6.jpg);
+}
+
+.chocolade_kunst_box:hover>.chocolade_kunst_overlay {
+  transform: scale(1);
+}
+
+.chocolade_kunst_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  color: var(--kleur_wit);
+  background-color: rgba(4, 34, 191, 0.4);
+  transform: scale(0);
+  transition: transform 0.3s linear;
+}
+
+.chocolade_kunst_overlay h6 {
+  padding-top: 2rem;
+}
+
+.chocolade_kunst_overlay p {
+  padding-top: 2rem;
+}
+
+#spellbook_container {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 500px;
+  height: 391px;
+  margin: 1rem auto 5rem auto;
+}
+
+#blend_mode_container {
+  position: relative;
+}
+
+#blend_mode_container::after {
+  position: absolute;
+  top: -89px;
+  left: -148px;
+  content: "";
+  display: block;
+  width: 500px;
+  height: 250px;
+  background-image: url(../img/open_spellbook.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+
+}
+
+select {
+  font-family: var(--font_teksten);
+  padding: 0.5rem;
+  height: 50px;
+  width: 200px;
+  font-size: 3rem;
+  text-align: center;
+  border-radius: 0.8rem;
+  color: var(--kleur_blauw);
+  background-color: rgba(4, 34, 191, 0.1);
+  border: none;
+  outline: none;
+}
+
+
+.image {
+  background-color: var(--kleur_blauw);
+}
+
+#masonry_container {
+  margin: 10rem auto;
+}
+
+
+.grid-item {
+  float: left;
+  margin-bottom: 10px;
+}
+
+.grid-item--praline1 {
+  width: 300px;
+  height: 200px;
+}
+
+.grid-item--praline2 {
+  width: 600px;
+  height: 200px;
+}
+
+.grid-item--title {
+  width: 1200px;
+  height: 100px;
+  margin: 20px 0;
+}
+
+.pralines_box,
+.gebak_box {
+  position: relative;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#Brujah {
+  background-image: url(../img/chocolade_fotos/praline_balletje.jpg);
+}
+
+#Betunia {
+  background-image: url(../img/chocolade_fotos/praline_cocos.jpg);
+}
+
+#Brutus {
+  background-image: url(../img/chocolade_fotos/praline_rond.jpg);
+}
+
+#Berthe {
+  background-image: url(../img/chocolade_fotos/pralines.jpg);
+}
+
+#Begonia {
+  background-image: url(../img/chocolade_fotos/pralines3.jpg);
+}
+
+#Bokai {
+  background-image: url(../img/chocolade_fotos/pralines4.jpg);
+}
+
+#Belly {
+  background-image: url(../img/chocolade_fotos/pralines5.jpg);
+}
+
+#Buxia {
+  background-image: url(../img/chocolade_fotos/pralines6.jpg);
+}
+
+#Bathory {
+  background-image: url(../img/chocolade_fotos/pralines_doos.jpg);
+}
+
+#Buffy {
+  background-image: url(../img/chocolade_fotos/pralines_doos2.jpg);
+}
+
+.pralines_box:hover>.praline_overlay {
+  transform: translateX(0);
+}
+
+.praline_overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 3rem;
+  background-color: rgba(4, 34, 191, 0.4);
+  color: var(--kleur_wit);
+  transform: translateX(100%);
+  transition: transform 0.3s linear;
+}
+
+.praline_overlay h4 {
+  font-size: 3rem;
+  font-weight: 100;
+  text-align: center;
+}
+
+.grid-item--gebak1 {
+  width: 800px;
+  height: 300px;
+}
+
+.grid-item--gebak2 {
+  width: 400px;
+  height: 300px;
+}
+
+#brownie {
+  background-image: url(../img/chocolade_fotos/chocolade_gebak_brownie.jpg);
+}
+
+#makron {
+  background-image: url(../img/chocolade_fotos/chocolade_gebak_makron.jpg);
+}
+
+#mousse {
+  background-image: url(../img/chocolade_fotos/chocolade_gebak_mousse.jpg);
+}
+
+#muffin {
+  background-image: url(../img/chocolade_fotos/chocolade_gebak_muffin.jpg);
+}
+
+#muffin_2 {
+  background-image: url(../img/chocolade_fotos/chocolade_gebak_muffin2.jpg);
+}
+
+#gebakjes {
+  background-image: url(../img/chocolade_fotos/chocolade_gebakjes.jpg);
+}
+
+/*
+    Contact Pagina
+
+*/
+#contact_page h5 {
+  text-align: center;
+}
+
+#contact_page img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 0.8rem;
+}
+
+#contact_adress {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+
+}
+
+#contact_adress,
+#contact_contact,
+#contact_socials,
+#form_container {
+  margin-bottom: 10rem;
+}
+
+#contact_adress h5 {
+  grid-area: 1/1/2/7;
+}
+
+#winkel_voorkant {
+  grid-area: 2/1/3/3;
+}
+
+#contact_adress p {
+  grid-area: 2/3/3/5;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#winkel_toog {
+  grid-area: 2/5/3/7;
+}
+
+#contact_adress iframe {
+  grid-area: 3/2/4/6;
+  place-self: center;
+}
+
+#contact_contact {
+  columns: 2;
+  text-align: center;
+}
+
+#contact_contact div {
+  break-inside: avoid;
+}
+
+#contact_socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#form_container {
+  position: relative;
+  font-family: var(--font_subtitel);
+  width: 50%;
+  margin: 0 auto;
+}
+
+#form_container::before,
+#form_container::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 400px;
+  height: 800px;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+
+#form_container::before {
+  left: -347px;
+  top: 122px;
+  background-image: url(../img/wizard1.png);
+}
+
+#form_container::after {
+  right: -327px;
+  top: 160px;
+  background-image: url(../img/wizard2.png);
+
+}
+
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 0.6rem 0 1.6rem 0;
+  resize: vertical;
+}
+
+
+input::placeholder {
+  font-family: var(--font_teksten);
+}
+
+input[type="submit"] {
+  background-color: var(--kleur_blauw);
+  color: var(--kleur_wit);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #2989d8;
+}
+
+/*
+    Footer
+
+*/
+.clearfix {
+  content: "";
+  clear: both;
+}
+
+footer,
+#footer_contact,
+#footer_socials,
+#footer_bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+footer {
+  background: linear-gradient(135deg, #0422bf 0%, #364ecb 10%, #687ad8 20%, #9aa6e5 30%, #ccd2f2 40%, #ffffff 50%, #ccd2f2 60%, #9aa6e5 70%, #687ad8 80%, #364ecb 90%, #0422bf 100%);
+  border-top: var(--kleur_blauw) ridge 1rem;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px -2px 1px, rgba(0, 0, 0, 0.09) 0px -4px 2px,
+    rgba(0, 0, 0, 0.09) 0px -8px 4px, rgba(0, 0, 0, 0.09) 0px -16px 8px,
+    rgba(0, 0, 0, 0.09) 0px -32px 16px;
+}
+
+#footer_contact {
+  padding: 2rem 2rem 2rem 5rem;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+#footer_contact h4 {
+  padding: 1rem 0;
+}
+
+#footer_contact {
+  text-align: center;
+}
+
+#footer_contact a,
+#contact_contact a {
+  text-decoration: none;
+  color: var(--kleur_zwart);
+}
+
+#footer_contact a:hover,
+#contact_contact a:hover {
+  font-size: 2.5rem;
+  color: var(--kleur_wit);
+  background-color: var(--kleur_zwart);
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+}
+
+#footer_adress,
+#footer_phone,
+#footer_links {
+  position: relative;
+  display: block;
+  width: 250px;
+  height: auto;
+  margin: 20rem 0 2rem 0;
+}
+
+#footer_adress::before,
+#footer_phone::before,
+#footer_links::before {
+  content: "";
+  position: absolute;
+  top: -200px;
+  left: 25px;
+  display: block;
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+#footer_adress::before {
+  background-image: url(../img/chocolade_fotos/winkel_voorkant.png);
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+
+}
+
+#footer_phone::before {
+
+  background-image: url(../img/chocolade_fotos/winkel_telefoon.jpg);
+  clip-path: polygon(50% 0%, 61% 30%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 30%);
+}
+
+#footer_links::before {
+
+  background-image: url(../img/chocolade_fotos/winkel_mail.jpg);
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+
+}
+
+
+.logo_social,
+.crystal_divider {
+  position: relative;
+  display: block;
+
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+
+.crystal_divider {
+  width: 100px;
+  height: 100px;
+  background-image: url(../img/arcane_crystal4.png);
+  margin-top: 25px;
+}
+
+.logo_social {
+  width: 150px;
+  height: 150px;
+  transform: scale(0.7);
+  transition: transform 0.1s linear;
+}
+
+.logo_social:hover {
+  transform: scale(1);
+}
+
+.logo_social::after {
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  content: "";
+  display: block;
+  width: 200px;
+  height: 200px;
+  background-image: url(../img/arcane_circle2.png);
+  background-position: center;
+  background-size: contain;
+  opacity: 0;
+  transition: opacity 0.25s linear;
+
+}
+
+.logo_social:hover::after {
+  opacity: 0.5;
+}
+
+#toverbook {
+  background-image: url(../img/magiers_socials_toverbook.png);
+}
+
+#tovergram {
+  background-image: url(../img/magiers_socials_tovergram.png);
+}
+
+#magica_datum {
+  background-image: url(../img/magiers_socials_magica-daticum.png);
+}
+
+#footer_bottom {
+  padding: 2rem 0 5rem 0;
 }

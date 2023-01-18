@@ -105,9 +105,9 @@
 :root {
   --font_titel: "wizards_magicregular", georgia, serif;
   --font_teksten: "kingthings_exeterregular", verdana, sans-serif;
-  --kleur_wit: #fcf5e5;
-  --kleur_zwart: #06080f;
-  --kleur_blauw: #0422bf;
+  --kleur_wit: #F2F2F2;
+  --kleur_zwart: #0D0D0D;
+  --kleur_blauw: #8C0D03;
 }
 
 /* Standaard */

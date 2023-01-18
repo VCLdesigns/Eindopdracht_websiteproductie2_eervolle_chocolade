@@ -3,25 +3,25 @@
 /* Fonts */
 
 @font-face {
-  font-family: "wizards_magicregular";
-  src: url("../fonts/wizards_magic-webfont.eot");
-  src: url("../fonts/wizards_magic-webfont.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/wizards_magic-webfont.woff2") format("woff2"),
-    url("../fonts/wizards_magic-webfont.woff") format("woff"),
-    url("../fonts/wizards_magic-webfont.ttf") format("truetype"),
-    url("../fonts/wizards_magic-webfont.svg#wizards_magicregular") format("svg");
+  font-family: "maximilian";
+  src: url("../fonts/maximilian-webfont.eot");
+  src: url("../fonts/maximilian-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/maximilian-webfont.woff2") format("woff2"),
+    url("../fonts/maximilian-webfont.woff") format("woff"),
+    url("../fonts/maximilian-webfont.ttf") format("truetype"),
+    url("../fonts/maximilian-webfont.svg#maximilian") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "kingthings_exeterregular";
-  src: url("../fonts/kingthings_exeter-webfont.eot");
-  src: url("../fonts/kingthings_exeter-webfont.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/kingthings_exeter-webfont.woff2") format("woff2"),
-    url("../fonts/kingthings_exeter-webfont.woff") format("woff"),
-    url("../fonts/kingthings_exeter-webfont.ttf") format("truetype"),
-    url("../fonts/kingthings_exeter-webfont.svg#kingthings_exeterregular") format("svg");
+  font-family: "bagnardsans";
+  src: url("../fonts/bagnardsans-webfont.eot");
+  src: url("../fonts/bagnardsans-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/bagnardsans-webfont.woff2") format("woff2"),
+    url("../fonts/bagnardsans-webfont.woff") format("woff"),
+    url("../fonts/bagnardsans-webfont.ttf") format("truetype"),
+    url("../fonts/bagnardsans-webfont.svg#bagnardsans") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -103,11 +103,11 @@
 
 /* Variabelen*/
 :root {
-  --font_titel: "wizards_magicregular", georgia, serif;
-  --font_teksten: "kingthings_exeterregular", verdana, sans-serif;
+  --font_titel: "maximilian", georgia, serif;
+  --font_teksten: "bagnardsans", verdana, sans-serif;
   --kleur_wit: #F2F2F2;
   --kleur_zwart: #0D0D0D;
-  --kleur_blauw: #8C0D03;
+  --kleur_rood: #8C0D03;
 }
 
 /* Standaard */
@@ -147,6 +147,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font_titel);
+  font-weight: 200;
 }
 
 h1 {
@@ -168,7 +169,6 @@ h1 {
 h2 {
   font-size: 6rem;
   text-align: center;
-  font-weight: 600;
   background-image: url(../img/title/background.png);
   background-repeat: repeat;
   -webkit-background-clip: text;
@@ -223,7 +223,7 @@ ul {
 
 header {
 
-  border-bottom: var(--kleur_blauw) ridge 1rem;
+  border-bottom: var(--kleur_rood) ridge 1rem;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
     rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
     rgba(0, 0, 0, 0.09) 0px 32px 16px;
@@ -243,7 +243,7 @@ header {
 
 header img {
   width: 100%;
-  max-width: 600px;
+  max-width: 370px;
 }
 
 #nav {
@@ -253,12 +253,12 @@ header img {
 #nav::after {
   content: "";
   position: absolute;
-  top: 32px;
-  left: -154px;
+  top: 28px;
+  left: -124px;
   display: block;
   width: 200px;
   height: 400px;
-  background-image: url(../img/wizard2.png);
+  background-image: url(../img/knight.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top left;
@@ -268,11 +268,11 @@ header img {
   display: block;
   width: 450px;
   height: auto;
-  border: var(--kleur_blauw) inset 0.5rem;
-  outline: var(--kleur_blauw) outset 0.5rem;
+  border: var(--kleur_rood) inset 0.5rem;
+  outline: var(--kleur_rood) outset 0.5rem;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   margin: 2rem;
-  color: var(--kleur_blauw);
+  color: var(--kleur_rood);
   text-shadow: -1px -1px 0px rgb(38, 57, 77);
   text-decoration: none;
   font-size: 4rem;
@@ -285,28 +285,28 @@ header img {
 }
 
 #nav_links a:nth-of-type(1) {
-  background: url(../img/arcane_circle.png), url(../img/arcane_circle.png);
+  background: url(../img/shield.png), url(../img/shield.png);
   background-position: 5%, 95%;
   background-repeat: no-repeat, no-repeat;
   background-size: contain, contain;
 }
 
 #nav_links a:nth-of-type(2) {
-  background: url(../img/arcane_circle2.png), url(../img/arcane_circle2.png);
+  background: url(../img/shield3.png), url(../img/shield3.png);
   background-position: 5%, 95%;
   background-repeat: no-repeat, no-repeat;
   background-size: contain, contain;
 }
 
 #nav_links a:nth-of-type(3) {
-  background: url(../img/arcane_circle3.png), url(../img/arcane_circle3.png);
+  background: url(../img/shield4.png), url(../img/shield4.png);
   background-position: 5%, 95%;
   background-repeat: no-repeat, no-repeat;
   background-size: contain, contain;
 }
 
 #nav_links a:nth-of-type(4) {
-  background: url(../img/arcane_circle4.png), url(../img/arcane_circle4.png);
+  background: url(../img/shield5.png), url(../img/shield5.png);
   background-position: 5%, 95%;
   background-repeat: no-repeat, no-repeat;
   background-size: contain, contain;
@@ -314,17 +314,13 @@ header img {
 
 #nav_links a:hover {
   font-size: 4.5rem;
-  color: #4f64d2;
-  background: url(../img/arcane_effect2.png), url(../img/arcane_effect2_inversed.png);
-  background-position: 5%, 95%;
-  background-size: contain, contain;
+  color: #c61204;
+  background: url(../img/spear_menu.png);
+  background-position: 5%;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
-/*
-    Call to action
-    Les 6 - Backgrounds + les 9 - Background blend mode
-*/
 
 /*
     Index Pagina
@@ -343,10 +339,12 @@ header img {
 
 #title_container h1 {
   font-size: 15rem;
+  font-weight: 100;
   text-shadow: none;
   color: var(--kleur_wit);
 
 }
+
 
 #title_container span {
   position: relative;
@@ -407,28 +405,17 @@ header img {
   content: "";
   display: block;
   width: 440px;
-  height: 416px;
+  height: 443px;
   position: absolute;
   top: -106px;
   left: -154.5px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(../img/arcane_circle2.png);
+  background-image: url(../img/spear_logo.png);
   z-index: -2;
-  animation: circleSpin 10s linear forwards;
-  transition: transform 0.1s linear;
 }
 
-@keyframes circleSpin {
-  0% {
-    transform: rotate(0deg);
-  }
 
-  100% {
-    transform: rotate(360deg);
-  }
-
-}
 
 .letter {
   transform: rotateY(0deg);
@@ -464,12 +451,14 @@ header img {
 blockquote:before {
   content: "";
   position: absolute;
-  left: -238px;
-  top: -44px;
+  left: 162px;
+  top: -45px;
   display: block;
-  width: 315px;
+  width: 275px;
   height: 400px;
-  background-image: url(../img/magic_wand.png);
+  background-image: url(../img/coat_of_arms.png);
+  z-index: -1;
+
 }
 
 
@@ -483,7 +472,7 @@ blockquote:before {
 }
 
 strong {
-  color: var(--kleur_blauw);
+  color: var(--kleur_rood);
   font-size: 10.2rem;
 }
 
@@ -504,59 +493,68 @@ strong {
 .about_background_corner {
   position: absolute;
   display: block;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 84px;
   background-size: contain;
   background-repeat: no-repeat;
   transition: transform 0.4s linear;
+  transform-origin: center;
 }
 
 #corner_top_left {
-  background-image: url(../img/summoning_circle1.png);
-  top: -150px;
-  left: -150px;
-  animation: summoningSpin 30s linear infinite;
+  background-image: url(../img/sword_reversed.png);
+  top: 10px;
+  left: 0px;
+  animation: summoningStab 10s linear infinite;
 }
 
 #corner_top_right {
-  background-image: url(../img/summoning_circle2.png);
-  top: -150px;
-  right: -150px;
-  animation: summoningSpinReverse 30s linear infinite;
+  background-image: url(../img/sword.png);
+  top: 10px;
+  right: 0px;
+  animation: summoningStabReverse 10s linear infinite;
 }
 
 #corner_bottom_left {
-  background-image: url(../img/summoning_circle2.png);
-  bottom: -150px;
-  left: -150px;
-  animation: summoningSpin 30s linear infinite;
+  background-image: url(../img/sword_reversed.png);
+  bottom: 10px;
+  left: 0px;
+  animation: summoningStab 10s linear infinite;
 }
 
 #corner_bottom_right {
-  background-image: url(../img/summoning_circle1.png);
-  bottom: -150px;
-  right: -150px;
-  animation: summoningSpinReverse 30s linear infinite;
+  background-image: url(../img/sword.png);
+  bottom: 10px;
+  right: 0px;
+  animation: summoningStabReverse 10s linear infinite;
 }
 
-@keyframes summoningSpin {
+@keyframes summoningStab {
   0% {
-    transform: rotate(0deg);
+    transform: translate(0px);
+  }
+
+  50% {
+    transform: translate(350px);
   }
 
   100% {
-    transform: rotate(360deg);
+    transform: translate(0px);
   }
 
 }
 
-@keyframes summoningSpinReverse {
+@keyframes summoningStabReverse {
   0% {
-    transform: rotate(0deg);
+    transform: translate(0px);
+  }
+
+  50% {
+    transform: translate(-350px);
   }
 
   100% {
-    transform: rotate(-360deg);
+    transform: translate(0px);
   }
 
 }
@@ -576,7 +574,7 @@ strong {
   font-size: 7rem;
   line-height: 6rem;
   padding: 0.4rem 0.8rem 0 0.3rem;
-  color: var(--kleur_blauw);
+  color: var(--kleur_rood);
 }
 
 #about_page h2 {
@@ -589,8 +587,8 @@ strong {
 
 #about_page h3 {
   padding: 2rem 0;
-  background-color: var(--kleur_blauw);
-  background-image: linear-gradient(135deg, #7db9e8 0%, #207cca 50%, #2989d8 51%, #0422bf 100%);
+  background-color: var(--kleur_rood);
+  background-image: linear-gradient(135deg, #fb5245 0%, #ec1605 50%, #c61204 51%, #8C0D03 100%);
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;
@@ -601,8 +599,8 @@ strong {
 
 #about_page h4 {
   padding: 1.5rem 0;
-  background-color: var(--kleur_blauw);
-  background-image: linear-gradient(135deg, #0422bf 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+  background-color: var(--kleur_rood);
+  background-image: linear-gradient(135deg, #8C0D03 0%, #c61204 50%, #ec1605 51%, #fb5245 100%);
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;
@@ -745,7 +743,7 @@ strong {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: var(--kleur_blauw);
+  background-color: var(--kleur_rood);
 }
 
 .chocolade_kunst_box {
@@ -821,13 +819,13 @@ strong {
 
 #blend_mode_container::after {
   position: absolute;
-  top: -89px;
-  left: -148px;
+  top: -14px;
+  left: -56px;
   content: "";
   display: block;
-  width: 500px;
-  height: 250px;
-  background-image: url(../img/open_spellbook.png);
+  width: 316px;
+  height: 236px;
+  background-image: url(../img/holy_grail.png);
   background-repeat: no-repeat;
   background-size: contain;
   z-index: -1;
@@ -842,7 +840,7 @@ select {
   font-size: 3rem;
   text-align: center;
   border-radius: 0.8rem;
-  color: var(--kleur_blauw);
+  color: var(--kleur_rood);
   background-color: rgba(4, 34, 191, 0.1);
   border: none;
   outline: none;
@@ -850,7 +848,7 @@ select {
 
 
 .image {
-  background-color: var(--kleur_blauw);
+  background-color: var(--kleur_rood);
 }
 
 #masonry_container {
@@ -1079,13 +1077,13 @@ select {
 #form_container::before {
   left: -347px;
   top: 122px;
-  background-image: url(../img/wizard1.png);
+  background-image: url(../img/knight.png);
 }
 
 #form_container::after {
   right: -327px;
   top: 160px;
-  background-image: url(../img/wizard2.png);
+  background-image: url(../img/knight2.png);
 
 }
 
@@ -1108,7 +1106,7 @@ input::placeholder {
 }
 
 input[type="submit"] {
-  background-color: var(--kleur_blauw);
+  background-color: var(--kleur_rood);
   color: var(--kleur_wit);
   padding: 1rem 2rem;
   border: none;
@@ -1140,8 +1138,8 @@ footer,
 }
 
 footer {
-  background: linear-gradient(135deg, #0422bf 0%, #364ecb 10%, #687ad8 20%, #9aa6e5 30%, #ccd2f2 40%, #ffffff 50%, #ccd2f2 60%, #9aa6e5 70%, #687ad8 80%, #364ecb 90%, #0422bf 100%);
-  border-top: var(--kleur_blauw) ridge 1rem;
+  background: linear-gradient(135deg, #8C0D03 0%, #c61204 10%, #ec1605 20%, #fa2e1e 30%, #fb5245 40%, #ffffff 50%, #fb5245 60%, #fa2e1e 70%, #ec1605 80%, #c61204 90%, #8C0D03 100%);
+  border-top: var(--kleur_rood) ridge 1rem;
   box-shadow: rgba(0, 0, 0, 0.09) 0px -2px 1px, rgba(0, 0, 0, 0.09) 0px -4px 2px,
     rgba(0, 0, 0, 0.09) 0px -8px 4px, rgba(0, 0, 0, 0.09) 0px -16px 8px,
     rgba(0, 0, 0, 0.09) 0px -32px 16px;
@@ -1226,26 +1224,25 @@ footer {
 
 
 .logo_social,
-.crystal_divider {
+.shield_divider {
   position: relative;
   display: block;
-
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 
 }
 
-.crystal_divider {
-  width: 100px;
-  height: 100px;
-  background-image: url(../img/arcane_crystal4.png);
+.shield_divider {
+  width: 99px;
+  height: 131px;
+  background-image: url(../img/banner.png);
   margin-top: 25px;
 }
 
 .logo_social {
-  width: 150px;
-  height: 150px;
+  width: 199px;
+  height: 300px;
   transform: scale(0.7);
   transition: transform 0.1s linear;
 }
@@ -1256,34 +1253,35 @@ footer {
 
 .logo_social::after {
   position: absolute;
-  top: -25px;
-  left: -25px;
+  top: 54px;
+  left: 60px;
   content: "";
   display: block;
-  width: 200px;
-  height: 200px;
-  background-image: url(../img/arcane_circle2.png);
+  width: 99px;
+  height: 131px;
+  background-image: url(../img/banner.png);
   background-position: center;
   background-size: contain;
+  background-repeat: no-repeat;
   opacity: 0;
   transition: opacity 0.25s linear;
 
 }
 
 .logo_social:hover::after {
-  opacity: 0.5;
+  opacity: 1;
 }
 
-#toverbook {
-  background-image: url(../img/magiers_socials_toverbook.png);
+#helmbook {
+  background-image: url(../img/ridders_socials_helmboek.png);
 }
 
-#tovergram {
-  background-image: url(../img/magiers_socials_tovergram.png);
+#stoeffer {
+  background-image: url(../img/ridders_socials_stoeffer.png);
 }
 
-#magica_datum {
-  background-image: url(../img/magiers_socials_magica-daticum.png);
+#ri_jo {
+  background-image: url(../img/ridders_socials_ri-jo.png);
 }
 
 #footer_bottom {

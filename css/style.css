@@ -107,7 +107,7 @@
   --font_teksten: "bagnardsans", verdana, sans-serif;
   --kleur_wit: #F2F2F2;
   --kleur_zwart: #0D0D0D;
-  --kleur_rood: #8C0D03;
+  --kleur_rood: rgb(140, 13, 3);
 }
 
 /* Standaard */
@@ -171,9 +171,9 @@ h2 {
   text-align: center;
   background-image: url(../img/title/background.png);
   background-repeat: repeat;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -790,7 +790,7 @@ strong {
   bottom: 0;
   text-align: center;
   color: var(--kleur_wit);
-  background-color: rgba(4, 34, 191, 0.4);
+  background-color: rgba(140, 13, 3, 0.4);
   transform: scale(0);
   transition: transform 0.3s linear;
 }
@@ -841,7 +841,7 @@ select {
   text-align: center;
   border-radius: 0.8rem;
   color: var(--kleur_rood);
-  background-color: rgba(4, 34, 191, 0.1);
+  background-color: rgba(140, 13, 3, 0.1);
   border: none;
   outline: none;
 }
@@ -940,7 +940,7 @@ select {
   width: 100%;
   height: auto;
   padding: 3rem;
-  background-color: rgba(4, 34, 191, 0.4);
+  background-color: rgba(140, 13, 3, 0.4);
   color: var(--kleur_wit);
   transform: translateX(100%);
   transition: transform 0.3s linear;
@@ -1075,8 +1075,8 @@ select {
 }
 
 #form_container::before {
-  left: -347px;
-  top: 122px;
+  left: -401px;
+  top: 167px;
   background-image: url(../img/knight.png);
 }
 
@@ -1115,7 +1115,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #2989d8;
+  background-color: #ec1605;
 }
 
 /*
@@ -1125,6 +1125,7 @@ input[type="submit"]:hover {
 .clearfix {
   content: "";
   clear: both;
+  margin-bottom: 10rem;
 }
 
 footer,
@@ -1286,4 +1287,5 @@ footer {
 
 #footer_bottom {
   padding: 2rem 0 5rem 0;
+  font-size: 1.5rem;
 }
